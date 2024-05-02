@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -17,44 +17,68 @@
   <!-- Sign-up form start -->
 
   <form action="#">
+    <img class="header-img" src="./assets/images/illustration-sign-up-desktop.svg" width="325px">
+    <section class="form-main">
 
-    <div class="form-container">
-
-      <div class="form-header">
-
-        <h1>Stay updated!</h1>
-        <p>
+      <section class="form-main-header">
+        <h1 class="title">Stay updated!</h1>
+        <p class="description">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
-        <ul>
-          <li>
-            <img src="./assets/images/icon-list.svg" alt="icon-list">
-            <p>Product discovery and building what matters</p>
-          </li>
-          <li>
-            <img src="./assets/images/icon-list.svg" alt="icon-list">
-            <p>Measuring to ensure updates are a success</p>
-          </li>
-          <li>
-            <img src="./assets/images/icon-list.svg" alt="icon-list">
-            <p>And much more!</p>
-          </li>
+        <ul class="description-list">
+            <li>
+              <img src="./assets/images/icon-list.svg" alt="icon-list">
+              <p>Product discovery and building what matters</p>
+            </li>
+          
+            <li>
+              <img src="./assets/images/icon-list.svg" alt="icon-list">
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+          
+            <li>
+              <img src="./assets/images/icon-list.svg" alt="icon-list">
+              <p>And much more!</p>
+            </li>
         </ul>
-      </div>
+      </section>
+      <section class="form-subscribe">
 
-      <div class="form-main">
-        <label for="email">Email address</label>
+        <label for="email" class="title">Email address</label>
         <input name="email" id="emailInput" type="email" placeholder="email@company.com">
         <button>Subscribe to monthly newsletter</button>
-      </div>
 
-    </div>
+      </section>
 
-    <div class="img-container">
-      <img class="header-img" src="./assets/images/illustration-sign-up-desktop.svg">
-    </div>
-
+    </section>
   </form>
+
+  <form action="#" class="sucess-modal">
+    <div class="sucess-header">
+      <img src="./assets/images/icon-list.svg" alt="icon-list" width="35px">
+      <h1 class="title">Thanks for subscribing!</h1>
+      <p class="description" id="emailTextElement">A confirmation email has been sent to <strong>example@gmail.com</strong>. Please open it and click the button inside to confirm your subscription</p>
+      <button>Dismiss message</button>
+    </form>
+  </div>
+
+  
+        
+        
+        
+            
+          
+
+      
+        
+      
+
+   
+
+    
+      
+    
+
 
   <!-- Sign-up form end -->
 
@@ -68,10 +92,18 @@
   Dismiss message -->
 
   <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
   </div>
+
+  <script src="validation.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "Vp_420Kz6xho2HSyw",
+        });
+    })();
+  </script>
 </body>
 </html>
