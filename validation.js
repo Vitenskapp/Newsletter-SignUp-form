@@ -17,7 +17,7 @@ const emailValidation = () => {
         email = inputElement.value;
         inputElement.value = "";
         handleSuccessModal(isEmailValid, email);
-        sendEmail(isEmail, email)
+        sendEmail(isEmailValid, email)
     } else {
         isEmailValid = false;
         inputElement.value = "";
