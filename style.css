@@ -163,7 +163,7 @@ form .form-main .form-subscribe button:hover {
     width: 100dvw;
   }
   .sucess-modal {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
