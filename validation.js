@@ -71,4 +71,5 @@ formElement.addEventListener("submit", (evt) => {
 modalElement.addEventListener("submit", (evt) => {
     evt.preventDefault();
     handleSuccessModal(false, "");
+    inputElement.classList.remove("wrong-email");
 })
