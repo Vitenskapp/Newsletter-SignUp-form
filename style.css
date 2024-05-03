@@ -23,7 +23,7 @@ body {
 
 /* Form styles */
 form {
-  display: flex;
+  display: none;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
@@ -109,7 +109,8 @@ form .form-main .form-subscribe button:hover {
 }
 
 .sucess-modal {
-  display: none;
+  display: flex;
+  flex-direction: column;
   background-color: hsl(0, 0%, 100%);
   width: 350px;
   height: fit-content;
@@ -129,16 +130,17 @@ form .form-main .form-subscribe button:hover {
   font-size: 14px;
   line-height: 20px;
 }
-.sucess-modal .sucess-header button {
+.sucess-modal button {
   padding: 15px 12px;
   border-radius: 5px;
+  width: 100%;
   border: none;
   background-color: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
   font-weight: bold;
   transition: 0.75s ease-in-out;
 }
-.sucess-modal .sucess-header button:hover {
+.sucess-modal button:hover {
   background: hsl(4, 100%, 67%);
   cursor: pointer;
   transition: 0.75s ease-in-out;
@@ -159,6 +161,17 @@ form .form-main .form-subscribe button:hover {
   .header-img {
     content: url(assets/images/illustration-sign-up-mobile.svg);
     width: 100dvw;
+  }
+  .sucess-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+  .sucess-modal .sucess-header {
+    margin-top: 50px;
   }
 }
 
