@@ -17,7 +17,7 @@ const emailValidation = () => {
         email = inputElement.value;
         inputElement.value = "";
         handleSuccessModal(isEmailValid, email);
-        sendEmail(email)
+        sendEmail(isEmail, email)
     } else {
         isEmailValid = false;
         inputElement.value = "";
@@ -27,11 +27,17 @@ const emailValidation = () => {
 
 }
 
-const sendEmail = async (email) => {
-    const params = {
-        email_id: email
+const sendEmail = async (isEmail, email) => {
+    if(isEmail){
+        const params = {
+            email_id: email
+        }
+        emailjs.send("service_h3yvlo", "template_sd835mg", params).then(() => console.log("Email enviado"));
+
+        isEmailValid = false;
+    } else {
+        return;
     }
-    emailjs.send("service_h3yvlo", "template_sd835mg", params).then(() => console.log("Email enviado"));
 }
 
 const elementEmailValidation = (isEmailValid) => {
