@@ -45,7 +45,7 @@
       <section class="form-subscribe">
 
         <label for="email" class="title">Email address</label>
-        <input name="email" id="emailInput" type="email" placeholder="email@company.com">
+        <input name="email" id="emailInput" type="email" placeholder="email@company.com" autocomplete="off">
         <button>Subscribe to monthly newsletter</button>
 
       </section>
@@ -62,48 +62,19 @@
     <button>Dismiss message</button>
   </form>
 
-  
-        
-        
-        
-            
-          
-
-      
-        
-      
-
-   
-
-    
-      
-    
-
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
-
-  <!-- Success message end -->
-
-  </div>
-
   <script src="validation.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
   <script type="text/javascript">
+
     (function(){
-        emailjs.init({
-          publicKey: "Vp_420Kz6xho2HSyw",
-        });
+        emailjs.init(
+          {
+            publicKey: "Vp_420Kz6xho2HSyw",
+          }
+      );
     })();
+
   </script>
 </body>
 </html>

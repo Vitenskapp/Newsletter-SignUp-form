@@ -32,7 +32,10 @@ const sendEmail = async (isEmail, email) => {
         const params = {
             email_id: email
         }
-        emailjs.send("service_h3yvlo", "template_sd835mg", params).then(() => console.log("Email enviado"));
+        emailjs.send("service_h3yvlo", "template_sd835mg", params).then(() => {
+            email = "";
+            console.log("Email enviado");
+        })
 
         isEmailValid = false;
     } else {
